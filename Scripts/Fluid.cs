@@ -7,10 +7,10 @@ namespace Fusion.Fluid
     public class Fluid : MonoBehaviour
     {
         public float density = 1;
-        public float Density { get { return density; } set { density = value; } }
 
         public float drag = 1;
-        public float Drag { get { return drag; } set { drag = value; } }
+
+        public float angularDrag = 1f;
 
         private void OnTriggerEnter(Collider other)
         {

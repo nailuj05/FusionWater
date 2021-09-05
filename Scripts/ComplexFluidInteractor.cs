@@ -29,9 +29,14 @@ namespace Fusion.Fluid {
 
                 if(difference < 0)
                 {
-                    Vector3 bouyancy = (Vector3.up * floatStrength * Mathf.Abs(difference) * Physics.gravity.magnitude * volume);
+                    Vector3 buoyancy = (Vector3.up * floatStrength * Mathf.Abs(difference) * Physics.gravity.magnitude * volume * fluid.density);
 
-                    rb.AddForceAtPosition(bouyancy, floater.position, ForceMode.Force);
+                    if (simulateWaterTurbulence)
+                    {
+                        buoyancy += GenerateTurbulence();
+                    }
+
+                    rb.AddForceAtPosition(buoyancy, floater.position, ForceMode.Force);
                     rb.AddForceAtPosition(rb.velocity * (dampeningFactor / floaters.Count) * volume, floater.position, ForceMode.Force);
                 }
             }

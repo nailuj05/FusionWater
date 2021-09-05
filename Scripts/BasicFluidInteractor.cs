@@ -9,12 +9,20 @@ namespace Fusion.Fluid {
 
         public override void FluidUpdate()
         {
-
             float difference = transform.position.y - fluid.transform.position.y;
 
             if(difference < 0)
             {
-                rb.AddForceAtPosition(Vector3.up * floatStrength * Mathf.Abs(difference) * Physics.gravity.magnitude * volume, transform.position, ForceMode.Force);
+                Vector3 buoyancy = Vector3.up * floatStrength * Mathf.Abs(difference) * Physics.gravity.magnitude * volume * fluid.density;
+
+                if (simulateWaterTurbulence)
+                {
+                    buoyancy += GenerateTurbulence();
+
+                    rb.AddTorque(GenerateTurbulence() * 0.5f);
+                }
+
+                rb.AddForceAtPosition(buoyancy, transform.position, ForceMode.Force);
                 rb.AddForceAtPosition(rb.velocity * dampeningFactor * volume, transform.position, ForceMode.Force);
             }
         }

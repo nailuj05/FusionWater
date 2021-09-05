@@ -198,11 +198,12 @@ MonoBehaviour:
   coll: {fileID: 1086501908072354690}
   volume: 24.4421
   customVolume: 0
-  dampeningFactor: 0.1
-  waterDrag: 3
-  waterAngularDrag: 1
+  dampeningFactor: 1
   inFluid: 0
   fluid: {fileID: 0}
+  simulateWaterTurbulence: 0
+  turbulenceStrenght: 1
+  rndTimeOffset: []
   floatStrength: 2
   floaters:
   - {fileID: 1086501908304538630}

@@ -17,14 +17,21 @@ namespace Fusion.Fluid
 
         public float dampeningFactor = .1f;
 
-        public float waterDrag = 3f;
-        public float waterAngularDrag = 1f;
+        private float waterDrag = 3f;
+        private float waterAngularDrag = 1f;
 
         [HideInInspector] float airDrag;
         [HideInInspector] float airAngularDrag;
 
         [HideInInspector] public bool inFluid;
         [HideInInspector] public Fluid fluid;
+
+        public bool simulateWaterTurbulence;
+        [Range(0, 5)] public float turbulenceStrenght = 1;
+
+        [HideInInspector] public float[] rndTimeOffset = new float[6];
+
+        private float time;
 
         public virtual void FluidUpdate()
         {
@@ -51,19 +58,46 @@ namespace Fusion.Fluid
             if (customVolume != 0)
                 volume = customVolume;
         }
+
+        public void Awake()
+        {
+            rndTimeOffset = new float[6];
+
+            for (int i = 0; i < 6; i++)
+            {
+                rndTimeOffset[i] = Random.Range(0f, 6f);
+            }
+        }
+
         #endregion
 
         #region Functions for FluidUpdate
         private void FixedUpdate()
         {
+            time += Time.fixedDeltaTime / 2;
+
             if (inFluid)
                 FluidUpdate();
+        }
+
+        public Vector3 GenerateTurbulence()
+        {
+            Vector3 turbulence = new Vector3(Mathf.PerlinNoise(time + rndTimeOffset[0], time + rndTimeOffset[1]) * 2 - 1,
+                                        Mathf.PerlinNoise(time + rndTimeOffset[2], time + rndTimeOffset[3]) * 2 - 1,
+                                        Mathf.PerlinNoise(time + rndTimeOffset[4], time + rndTimeOffset[5]) * 2 - 1);
+
+            Debug.DrawRay(transform.position, turbulence);
+
+            return turbulence;
         }
 
         public void EnterFluid(Fluid enteredFluid)
         {
             fluid = enteredFluid;
             inFluid = true;
+
+            waterDrag = fluid.drag;
+            waterAngularDrag = fluid.angularDrag;
 
             rb.drag = waterDrag;
             rb.angularDrag = waterAngularDrag;
