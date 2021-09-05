@@ -250,6 +250,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6759020894846047391, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -462981019419857548, guid: 0b5dbcd11d4d49941a4041d3d7ce1437, type: 3}
     - target: {fileID: 7001081503404949888, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
       propertyPath: m_Name
       value: WaterBox
@@ -261,6 +265,10 @@ PrefabInstance:
     - target: {fileID: 7665977743153224506, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665977743153224506, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7665977743153224506, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
       propertyPath: m_LocalScale.z
@@ -313,7 +321,11 @@ PrefabInstance:
     - target: {fileID: 8720531137120670788, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a549e9e4fcda57b468683a27faf728ac, type: 2}
+      objectReference: {fileID: 2100000, guid: b4ed209c3e229ca48b8870703563ec47, type: 2}
+    - target: {fileID: 8802332718494720085, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c175f4e483dbed34f95afe2131c6151e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
 --- !u!1 &1069895346
@@ -756,6 +768,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1086501908072354689, guid: 2d8fc55531749d743a15d17abf9ab91b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c175f4e483dbed34f95afe2131c6151e, type: 2}
     - target: {fileID: 1086501908072354691, guid: 2d8fc55531749d743a15d17abf9ab91b, type: 3}
       propertyPath: m_Name
       value: Complex
@@ -830,7 +846,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 07dc66ae04b7f6a43b9674bf0fefb33a, type: 2}
+  - {fileID: 2100000, guid: c175f4e483dbed34f95afe2131c6151e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -859,7 +875,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149302815198}
-  m_Mesh: {fileID: -5495902117074765545, guid: f0270567b00a1814ab7f3f897b93aadf, type: 3}
+  m_Mesh: {fileID: -5495902117074765545, guid: b80ebef8a66a6e348b07e4e9a3e8e8a3, type: 3}
 --- !u!1001 &4492343535255565324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -875,6 +891,10 @@ PrefabInstance:
       propertyPath: dampeningFactor
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4492343535538351005, guid: 322896427e9b06d469b7ca1bb25db1af, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c175f4e483dbed34f95afe2131c6151e, type: 2}
     - target: {fileID: 4492343535538351007, guid: 322896427e9b06d469b7ca1bb25db1af, type: 3}
       propertyPath: m_RootOrder
       value: 2
