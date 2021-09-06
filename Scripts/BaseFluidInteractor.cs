@@ -6,6 +6,7 @@ using UnityEditor;
 namespace Fusion.Fluid
 {
     [RequireComponent(typeof(Rigidbody))]
+    [AddComponentMenu("FusionWater/_Internal/BaseFluidInteractor")]
     public class BaseFluidInteractor : MonoBehaviour
     {
         [HideInInspector] public Rigidbody rb;

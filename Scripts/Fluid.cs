@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Fusion.Fluid
 {
+    [AddComponentMenu("FusionWater/Fluid")]
     public class Fluid : MonoBehaviour
     {
         public float density = 1;

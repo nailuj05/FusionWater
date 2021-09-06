@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEditor;
 
 namespace Fusion.Fluid {
+    [AddComponentMenu("FusionWater/ComplexFluidInteractor")]
     public class ComplexFluidInteractor : BaseFluidInteractor
     {
         public float floatStrength = 2;

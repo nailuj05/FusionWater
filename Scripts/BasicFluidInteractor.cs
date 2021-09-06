@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Fusion.Fluid {
+    [AddComponentMenu("FusionWater/BasicFluidInteractor")]
     public class BasicFluidInteractor : BaseFluidInteractor
     {
         public float floatStrength = 2;
