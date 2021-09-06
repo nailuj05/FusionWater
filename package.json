@@ -1,0 +1,19 @@
+{
+  "name": "com.fusion.water",
+  "version": "0.1.0",
+  "displayName": "Fusion Water",
+  "description": "A simple way to add buoyancy / water physics in Unity, build on the existing physics engine.",
+  "unityRelease": "0b5",
+  "changelogUrl": "https://github.com/nailuj05/FusionWater/commits/main",
+  "licensesUrl": "https://github.com/nailuj05/FusionWater/blob/main/LICENSE",
+ "keywords": [
+    "Water",
+    "Buoyancy",
+    "Physics"
+  ],
+  "author": {
+    "name": "Julian",
+    "email": "sil3nt@gmx.de",
+    "url": "https://github.com/nailuj05"
+  }
+}
