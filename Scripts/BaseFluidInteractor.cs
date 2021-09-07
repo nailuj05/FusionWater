@@ -28,11 +28,13 @@ namespace Fusion.Fluid
         [HideInInspector] public Fluid fluid;
 
         public bool simulateWaterTurbulence;
-        [Range(0, 5)] public float turbulenceStrenght = 1;
+        [Range(0, 5)] public float turbulenceStrength = 1;
 
         [HideInInspector] public float[] rndTimeOffset = new float[6];
 
         private float time;
+
+        public float floatStrength = 2;
 
         public virtual void FluidUpdate()
         {
@@ -89,7 +91,7 @@ namespace Fusion.Fluid
 
             Debug.DrawRay(transform.position, turbulence);
 
-            return turbulence;
+            return turbulence * turbulenceStrength;
         }
 
         public void EnterFluid(Fluid enteredFluid)

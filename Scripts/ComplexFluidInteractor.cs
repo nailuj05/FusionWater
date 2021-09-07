@@ -7,8 +7,6 @@ namespace Fusion.Fluid {
     [AddComponentMenu("FusionWater/ComplexFluidInteractor")]
     public class ComplexFluidInteractor : BaseFluidInteractor
     {
-        public float floatStrength = 2;
-
         public List<Transform> floaters = new List<Transform>();
 
         public override void Start()
