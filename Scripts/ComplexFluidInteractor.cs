@@ -43,7 +43,7 @@ namespace Fusion.Fluid {
 
         private void OnDrawGizmos()
         {
-            Gizmos.DrawWireCube(transform.position, GetComponent<Collider>().bounds.size);
+            //Gizmos.DrawWireCube(transform.position, GetComponent<Collider>().bounds.size);
 
             foreach (Transform floater in floaters)
             {
