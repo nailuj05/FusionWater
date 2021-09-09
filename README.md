@@ -4,7 +4,8 @@ A simple way to add buoyancy / water physics in Unity, built on the existing phy
 This package can be downloaded from the releases section and dragged into any Unity Project to install.
 There are Shaders/Materials provided for both URP and Standard RP.
 
-![BoatDemo (1)](https://user-images.githubusercontent.com/57530068/132409499-81a7b967-cc93-4b6a-aefd-6f1ba1a82a80.gif)
+![BoatDemo_repeat](https://user-images.githubusercontent.com/57530068/132723739-422869ae-c104-4038-a6ef-3d7cbfd650fd.gif)
+
 
 ## Setup Guide
 
@@ -35,4 +36,5 @@ The BaseFluidInteractor also defines the basic settings all Interactors inherit.
 This allows one to place floaters on the edges of a longer object or along the hull of a ship to better model its submerged volume and buoyancy.  
 In the Unity Editor the floaters can be automatically placed at the corners of the colliders bounding box or placed manually. A floater is nothing more than an empty gameobject, that is added to the ComplexFluidInteractors ```Floaters``` List. The floaters are drawn as spheres in the scene view, green if in air, red if submerged.
 
-![BoatFloaters](https://user-images.githubusercontent.com/57530068/132555755-cbf34a28-4018-494c-8269-15e4d70c69dc.gif)
+![BoatFloaters_repeat](https://user-images.githubusercontent.com/57530068/132723767-227807fd-65e4-4f0a-8c63-6c03e4aa73d3.gif)
+
