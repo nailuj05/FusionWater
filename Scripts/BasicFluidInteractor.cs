@@ -22,7 +22,7 @@ namespace Fusion.Fluid {
                 }
 
                 rb.AddForceAtPosition(buoyancy, transform.position, ForceMode.Force);
-                rb.AddForceAtPosition(rb.velocity * dampeningFactor * volume, transform.position, ForceMode.Force);
+                rb.AddForceAtPosition(-rb.velocity * dampeningFactor * volume, transform.position, ForceMode.Force);
             }
         }
     }

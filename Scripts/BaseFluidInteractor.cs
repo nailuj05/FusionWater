@@ -77,7 +77,7 @@ namespace Fusion.Fluid
         #region Functions for FluidUpdate
         private void FixedUpdate()
         {
-            time += Time.fixedDeltaTime / 2;
+            time += Time.fixedDeltaTime / 4;
 
             if (inFluid)
                 FluidUpdate();
@@ -86,7 +86,7 @@ namespace Fusion.Fluid
         public Vector3 GenerateTurbulence()
         {
             Vector3 turbulence = new Vector3(Mathf.PerlinNoise(time + rndTimeOffset[0], time + rndTimeOffset[1]) * 2 - 1,
-                                        Mathf.PerlinNoise(time + rndTimeOffset[2], time + rndTimeOffset[3]) * 2 - 1,
+                                        0,
                                         Mathf.PerlinNoise(time + rndTimeOffset[4], time + rndTimeOffset[5]) * 2 - 1);
 
             Debug.DrawRay(transform.position, turbulence);
