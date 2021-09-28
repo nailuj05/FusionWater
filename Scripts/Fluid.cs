@@ -25,7 +25,7 @@ namespace Fusion.Fluid
         {
             if (other.TryGetComponent(out BaseFluidInteractor fluidInteractor))
             {
-                fluidInteractor.ExitFluid();
+                fluidInteractor.ExitFluid(this);
             }
         }
     }

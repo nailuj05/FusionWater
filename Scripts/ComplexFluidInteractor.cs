@@ -49,7 +49,7 @@ namespace Fusion.Fluid {
             {
                 float difference = 0;
 
-                if (inFluid)
+                if (inFluidCount > 0)
                     difference = floater.position.y - fluid.transform.position.y;
 
                 if (difference < 0)

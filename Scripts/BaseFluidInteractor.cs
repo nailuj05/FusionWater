@@ -24,7 +24,7 @@ namespace Fusion.Fluid
         [HideInInspector] float airDrag;
         [HideInInspector] float airAngularDrag;
 
-        [HideInInspector] public bool inFluid;
+        [HideInInspector] public int inFluidCount;
         [HideInInspector] public Fluid fluid;
 
         public bool simulateWaterTurbulence;
@@ -79,7 +79,7 @@ namespace Fusion.Fluid
         {
             time += Time.fixedDeltaTime / 4;
 
-            if (inFluid)
+            if (inFluidCount > 0)
                 FluidUpdate();
         }
 
@@ -97,7 +97,7 @@ namespace Fusion.Fluid
         public void EnterFluid(Fluid enteredFluid)
         {
             fluid = enteredFluid;
-            inFluid = true;
+            inFluidCount++;
 
             waterDrag = fluid.drag;
             waterAngularDrag = fluid.angularDrag;
@@ -106,13 +106,18 @@ namespace Fusion.Fluid
             rb.angularDrag = waterAngularDrag;
         }
 
-        public void ExitFluid()
+        public void ExitFluid(Fluid fluidToExit)
         {
-            fluid = null;
-            inFluid = false;
+            if(fluid == fluidToExit)
+                fluid = null;
 
-            rb.drag = airDrag;
-            rb.angularDrag = airAngularDrag;
+            inFluidCount--;
+
+            if(inFluidCount == 0)
+            {
+                rb.drag = airDrag;
+                rb.angularDrag = airAngularDrag;
+            }
         }
         #endregion
 
