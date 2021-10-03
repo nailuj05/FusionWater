@@ -92,6 +92,7 @@ namespace Fusion.Fluid {
         #endregion
     }
 
+#if UNITY_EDITOR
     [CustomEditor(typeof(ComplexFluidInteractor))]
     public class ComplexFluidInteractorEditor : Editor
     {
@@ -123,4 +124,5 @@ namespace Fusion.Fluid {
             }
         }
     }
+#endif
 }
