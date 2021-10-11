@@ -6,8 +6,7 @@ using UnityEditor;
 namespace Fusion.Fluid
 {
     [RequireComponent(typeof(Rigidbody))]
-    [AddComponentMenu("FusionWater/_Internal/BaseFluidInteractor")]
-    public class BaseFluidInteractor : MonoBehaviour
+    public abstract class BaseFluidInteractor : MonoBehaviour
     {
         [HideInInspector] public Rigidbody rb;
         [HideInInspector] public Collider coll;
@@ -36,10 +35,7 @@ namespace Fusion.Fluid
 
         public float floatStrength = 2;
 
-        public virtual void FluidUpdate()
-        {
-            //Do the Fluid Update
-        }
+        public abstract void FluidUpdate();
 
         #region UnityFunctions
         public virtual void Start()
