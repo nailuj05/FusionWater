@@ -131,7 +131,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 07dc66ae04b7f6a43b9674bf0fefb33a, type: 2}
+  - {fileID: 2100000, guid: 9bf2a993c0a3bb74aa9dde449eec0a7a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -199,10 +199,10 @@ MonoBehaviour:
   volume: 24.4421
   customVolume: 0
   dampeningFactor: 1
-  inFluid: 0
+  inFluidCount: 0
   fluid: {fileID: 0}
   simulateWaterTurbulence: 0
-  turbulenceStrenght: 1
+  turbulenceStrength: 1
   rndTimeOffset: []
   floatStrength: 2
   floaters:

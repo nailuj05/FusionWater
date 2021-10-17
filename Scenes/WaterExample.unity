@@ -161,7 +161,7 @@ MonoBehaviour:
   volume: 0
   customVolume: 0
   dampeningFactor: 0.1
-  inFluid: 0
+  inFluidCount: 0
   fluid: {fileID: 0}
   simulateWaterTurbulence: 0
   turbulenceStrength: 1
@@ -216,7 +216,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 9bf2a993c0a3bb74aa9dde449eec0a7a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -267,10 +267,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6759020894846047391, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -462981019419857548, guid: 0b5dbcd11d4d49941a4041d3d7ce1437, type: 3}
     - target: {fileID: 7001081503404949888, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
       propertyPath: m_Name
       value: WaterBox
@@ -282,14 +278,6 @@ PrefabInstance:
     - target: {fileID: 7665977743153224506, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7665977743153224506, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7665977743153224506, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 6.207931
       objectReference: {fileID: 0}
     - target: {fileID: 7665977743153224506, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -319,34 +307,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 7665977743153224506, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7665977743153224506, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7665977743153224506, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7920071810057485523, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
       propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8720531137120670788, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b4ed209c3e229ca48b8870703563ec47, type: 2}
     - target: {fileID: 8720531137120671160, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
       propertyPath: density
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8802332718494720085, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c175f4e483dbed34f95afe2131c6151e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae8556cba35d73448bc5447f084ae4c2, type: 3}
 --- !u!1 &1594836587
@@ -480,7 +448,7 @@ MonoBehaviour:
   volume: 0
   customVolume: 0
   dampeningFactor: 0.1
-  inFluid: 0
+  inFluidCount: 0
   fluid: {fileID: 0}
   simulateWaterTurbulence: 0
   turbulenceStrength: 1
@@ -535,7 +503,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 9bf2a993c0a3bb74aa9dde449eec0a7a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -617,7 +585,7 @@ MonoBehaviour:
   volume: 0
   customVolume: 0
   dampeningFactor: 0.1
-  inFluid: 0
+  inFluidCount: 0
   fluid: {fileID: 0}
   simulateWaterTurbulence: 0
   turbulenceStrength: 1
@@ -672,7 +640,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 9bf2a993c0a3bb74aa9dde449eec0a7a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -839,10 +807,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1086501908072354689, guid: 2d8fc55531749d743a15d17abf9ab91b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c175f4e483dbed34f95afe2131c6151e, type: 2}
     - target: {fileID: 1086501908072354691, guid: 2d8fc55531749d743a15d17abf9ab91b, type: 3}
       propertyPath: m_Name
       value: Complex
@@ -908,10 +872,6 @@ PrefabInstance:
       propertyPath: dampeningFactor
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4492343535538351005, guid: 322896427e9b06d469b7ca1bb25db1af, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c175f4e483dbed34f95afe2131c6151e, type: 2}
     - target: {fileID: 4492343535538351007, guid: 322896427e9b06d469b7ca1bb25db1af, type: 3}
       propertyPath: m_RootOrder
       value: 2
