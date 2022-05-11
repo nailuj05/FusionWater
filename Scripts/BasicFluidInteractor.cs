@@ -8,7 +8,8 @@ namespace Fusion.Fluid {
     {
         public override void FluidUpdate()
         {
-            float difference = transform.position.y - fluid.transform.position.y;
+            var fluidSurface = fluid.coll ? fluid.coll.bounds.max.y : fluid.transform.position.y;
+            float difference = transform.position.y - fluidSurface;
 
             if(difference < 0)
             {
