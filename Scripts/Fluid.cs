@@ -13,6 +13,13 @@ namespace Fusion.Fluid
 
         public float angularDrag = 1f;
 
+        public Collider coll { get; private set; }
+
+        private void Start()
+        {
+            coll = GetComponent<Collider>();
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             if(other.TryGetComponent(out BaseFluidInteractor fluidInteractor))
